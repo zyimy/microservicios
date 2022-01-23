@@ -1,0 +1,50 @@
+package com.microservicios.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import com.microservicios.entity.Users;
+import com.microservicios.modelo.Bike;
+import com.microservicios.modelo.Cars;
+import com.microservicios.repository.UserRepository;
+
+@Service
+public class UserService {
+	
+	@Autowired
+	UserRepository ur;
+	
+	@Autowired
+	RestTemplate restTemplate;
+	
+	public List<Users>getAll(){
+		
+		return ur.findAll();
+	}
+	
+	public Users getUserById(int id) {
+		return ur.findById(id).orElse(null);
+	}
+	
+	public Users save(Users users) {
+		Users user = ur.save(users);
+		
+		return users;
+	}
+	
+	public List<Cars>getCars(int userId){
+		List<Cars>cars = restTemplate.getForObject("http://localhost:8003/car/byUser"+userId,List.class);
+		
+		return cars;
+	}
+	
+	public List<Bike>getBike(int userId){
+		List<Bike>bikes = restTemplate.getForObject("http://localhost:8009/bike/byUser"+userId,List.class);
+		
+		return bikes;
+	}
+
+}

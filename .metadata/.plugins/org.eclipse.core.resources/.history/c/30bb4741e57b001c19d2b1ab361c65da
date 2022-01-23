@@ -1,0 +1,17 @@
+package com.microservicios.feign;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.microservicios.modelo.Cars;
+
+@FeignClient(name="carServices",url="http://localhost:8011")
+@RequestMapping("/car")
+public interface CarFeignClients {
+	
+	@PostMapping()
+	Cars save(@RequestBody Cars cars);
+
+}

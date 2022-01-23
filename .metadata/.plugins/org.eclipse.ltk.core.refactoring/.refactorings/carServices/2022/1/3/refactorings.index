@@ -1,0 +1,13 @@
+1642721892366	Rename type 'Users'
+1642722976475	Rename type 'UserRepository'
+1642723001841	Rename type 'UserService'
+1642723025722	Rename type 'UserController'
+1642755418927	Copy package
+1642755426280	Copy package
+1642755430954	Copy package
+1642755446094	Copy package
+1642755481120	Copy package
+1642757862917	Rename package 'com.microservicios.controller'
+1642757888733	Rename package 'com.microservicios.modelo'
+1642757905300	Rename package 'com.microservicios.repository'
+1642757925077	Rename package 'com.microservicios.service'

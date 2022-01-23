@@ -1,0 +1,2 @@
+server.port=8014
+spring.application.name=userServices

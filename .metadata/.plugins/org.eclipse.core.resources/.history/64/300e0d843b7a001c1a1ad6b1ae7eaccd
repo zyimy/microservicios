@@ -1,0 +1,18 @@
+package com.microservicios.modelo;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Entity
+@Table(name="users")
+@Getter
+@Setter
+public class Users {
+	
+	private int idUsers;
+	private String nombre;
+
+}

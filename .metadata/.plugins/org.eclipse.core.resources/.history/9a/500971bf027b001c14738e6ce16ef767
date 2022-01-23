@@ -1,0 +1,5 @@
+package com.microservicios.feign;
+
+public interface CarFeignClients {
+
+}

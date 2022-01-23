@@ -1,0 +1,5 @@
+package com.microservicios.modelo;
+
+public class Users {
+
+}

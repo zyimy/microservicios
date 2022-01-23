@@ -1,0 +1,5 @@
+package com.microservicios.repository;
+
+public interface UserRepository extends JpaRepository<Users,Integer> {
+
+}

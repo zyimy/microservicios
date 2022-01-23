@@ -1,0 +1,5 @@
+package com.microservicios.controller;
+
+public class UserController {
+
+}
